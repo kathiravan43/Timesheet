@@ -1,0 +1,45 @@
+<!-- <input type="text" [(ngModel)]="searchTerm" placeholder="Search Employee" (input)="applyFilter()" /> -->
+
+<table class="employee-table">
+  <thead>
+    <tr>
+      <th>Total No Of Employees</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ employeeCount }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="department-table">
+  <thead>
+    <tr>
+      <th>Department</th>
+      <th>No Of Employees</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let departmentCount of departmentCounts">
+      <td>{{ departmentCount.department }}</td>
+      <td>{{ departmentCount.count }}</td>
+    </tr>
+  </tbody>
+</table>
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of filteredEmployees">
+      <td>{{ employee.fullName }}</td>
+      <td>{{ employee.email }}</td>
+
+    </tr>
+  </tbody>
+</table> -->

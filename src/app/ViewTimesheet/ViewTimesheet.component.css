@@ -1,0 +1,51 @@
+/* Style for the table */
+table {
+  width: 90%;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 5%;
+}
+
+/* Style for the table headers */
+th {
+  background-color: #f8f8f8;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Style for the table cells */
+td {
+  padding: 10px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+/* Style for the action buttons */
+button {
+  padding: 6px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: 3px black;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+  margin-left: 2px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Style for the accepted status */
+.accepted {
+  color: green;
+}
+
+/* Style for the declined status */
+.declined {
+  color: red;
+}
+h3{
+  margin-left: 5%;
+}

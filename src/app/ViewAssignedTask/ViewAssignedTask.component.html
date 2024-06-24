@@ -1,0 +1,26 @@
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Employee Name</th>
+      <th>Task Name</th>
+      <th>Description</th>
+      <th>DeadLine</th>
+      <th>Status</th>
+
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let request of assignedTask">
+      <td>{{ request.assignee }}</td>
+      <td>{{ request.taskName }}</td>
+      <td>{{ request.description |WordWarp  }}</td>
+      <td>{{ request.deadline | date }}</td>
+      <td>{{ request.status }}</td>
+
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Cards</title>
+</head>
+
+<style type="text/css">
+
+
+*{
+ margin: 0px;
+ padding: 0px;
+}
+body{
+ font-family: arial;
+/*  width: 100%;
+  height: 100vh;
+  background-image: url("/assets/img/background.png");
+  background-position: center;
+  background-size: cover; */
+}
+.main{
+
+ margin: 3%;
+ margin-left: 4%;
+}
+
+.card{
+     width: 20%;
+     display: inline-block;
+     box-shadow: 2px 2px 20px black;
+     border-radius: 5px;
+     margin: 2%;
+    }
+
+.image img{
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+
+
+
+ }
+
+.title{
+
+  text-align: center;
+  padding: 10px;
+
+ }
+
+h1{
+  font-size: 20px;
+ }
+
+.des{
+  padding: 3px;
+  text-align: center;
+
+  padding-top: 10px;
+        border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+button{
+  margin-top: 40px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding:10px;
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
+  color: rgb(239, 12, 12);
+}
+button:hover{
+  background-color: black;
+  color: white;
+  transition: .5s;
+  cursor: pointer;
+}
+
+</style>
+<body>
+  <div class="pop-up">
+  <div *ngIf="displayGreeting" class="greeting-popup">
+    <h2>Welcome, {{ userName }}!</h2>
+    <p>Current time: {{ currentTime | date: 'hh:mm a' }}</p>
+    <p>{{ randomQuote }}</p>
+    <button class="close-button" (click)="closeGreeting()">X</button>
+  </div>
+  </div>
+
+<div class="main">
+
+ <!--cards -->
+
+<div class="card">
+
+<div class="image">
+   <img src="assets/img/angular.jpg">
+</div>
+<div class="title">
+ <h1>
+ANGULAR</h1>
+</div>
+<div class="des">
+ <p>"it's a platform for building dynamic and scalable web applications "</p>
+<button><a href="https://angular.io/">Read More...</a></button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="assets/img/java.jpg">
+</div>
+<div class="title">
+ <h1>
+JAVA</h1>
+</div>
+<div class="des">
+ <p>"Java is to programming what coffee is to productivity."</p>
+<button><a href="https://docs.oracle.com/javase/tutorial/">Read More...</a></button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="assets/img/reactjs.jpg">
+</div>
+<div class="title">
+ <h1>
+REACT JS</h1>
+</div>
+<div class="des">
+ <p>"React that helps you build user interfaces with efficiency."</p>
+<button>Read More...</button>
+</div>
+</div>
+
+
+
+<div class="card">
+
+<div class="image">
+   <img src="assets/img/download (1).jpg">
+</div>
+<div class="title">
+ <h1>
+NODE JS</h1>
+</div>
+<div class="des">
+ <p>Node.js shining example how JS has evolved beyond the browser.</p>
+<button>Read More...</button>
+</div>
+</div>
+
+
+<div class="card">
+
+<div class="image">
+   <img src="assets/img/dotenet.jpg">
+</div>
+<div class="title">
+ <h1>
+DOTE NET</h1>
+</div>
+<div class="des">
+ <p>You can Add Desccription Here...</p>
+<button>Read More...</button>
+</div>
+</div>
+<!--cards -->
+
+<div class="card">
+
+<div class="image">
+   <img src="assets/img/bootsrap.jpg">
+</div>
+<div class="title">
+ <h1>
+BOOTSTRAP</h1>
+</div>
+<div class="des">
+ <p>You can Add Desccription Here...</p>
+<button>Read More...</button>
+</div>
+</div>
+<!--cards -->
+
+<div class="card">
+
+<div class="image">
+   <img src="assets/img/phyton.jpg">
+</div>
+<div class="title">
+ <h1>
+PYTHON</h1>
+</div>
+<div class="des">
+ <p>You can Add Desccription Here...</p>
+<button>Read More...</button>
+
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="assets/img/php.jpg">
+</div>
+<div class="title">
+ <h1>
+PHP</h1>
+</div>
+<div class="des">
+ <p>You can Add Desccription Here...</p>
+<button>Read More...</button>
+</div>
+</div>
+<!--cards -->
+
+<app-usersidenavbar></app-usersidenavbar>
+<div>
+  <app-Footer></app-Footer>
+</div>
+<div>
+  <app-Display></app-Display>
+</div>
+</div>
+</body>
+</html>

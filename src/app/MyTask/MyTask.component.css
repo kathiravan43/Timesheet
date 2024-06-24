@@ -1,0 +1,58 @@
+/* Style for the table */
+table {
+  width: 95%;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 4%;
+}
+
+/* Style for the table headers */
+th {
+  background-color: #f8f8f8;
+  padding: 5px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Style for the table cells */
+td {
+  padding: 6px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+/* Style for the action buttons */
+button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 2px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Style for the accepted status */
+.accepted {
+  color: green;
+}
+
+/* Style for the declined status */
+.declined {
+  color: red;
+}
+h3{
+  margin-left: 5%;
+}
+.word-wrap-container {
+  width: 300px;
+  /* 'break-word' allows the word to be broken across multiple lines if it exceeds the container's width */
+  word-wrap: break-word;
+  /* Alternatively, you can use 'break-all' to break words at any character, not just at the usual word boundaries */
+  /* word-break: break-all; */
+}

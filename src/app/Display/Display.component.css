@@ -1,0 +1,21 @@
+.slide-top {
+  position:absolute;
+  top: 55px;
+  left: 0;
+  width: 30%;
+
+ border-radius: 20px;
+
+  height: 60px; /* Adjust the height as needed */
+  background-color:rgb(221, 202, 163); /* Adjust the background color as needed */
+  animation: slide-in-animation 10s linear infinite;
+  animation-name: slide;
+  animation-duration: 10s; /* Adjust the duration as needed */
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+p
+{
+  text-align: center;
+}
+

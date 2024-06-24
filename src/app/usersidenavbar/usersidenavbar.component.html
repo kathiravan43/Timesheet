@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<div class="header">
+<div class="sidenav">
+  <div class="user">
+  </div>
+  <ul>
+    <li><a routerLink="/myprofile"><img src="/assets/img/mypro.jpg"></a><p>My Profile</p></li>
+    <li><a routerLink="/timesheet"> <img src="/assets/img/timesheet.jpg"></a><p>TimeSheet</p></li>
+    <li><a routerLink="/myworkdone"> <img src="/assets/img/timesheet.jpg"></a><p>My WorkDone</p></li>
+    <li><a routerLink="/leaverequest"><img src="/assets/img/leave.jpg"></a><p>Leave Request</p></li>
+    <li><a routerLink="/myleave"><img src="/assets/img/leave.jpg"></a><p>Leave Status</p></li>
+    <li><a routerLink="/mytask"><img src="/assets/img/holiday.jpg"></a><p>MyTask</p></li>
+    <li><a routerLink="/message"><img src="/assets/img/messages.png"></a><p>Notification</p></li>
+  </ul>
+
+  <ul>
+    <li><a routerLink="/logout"><img src="/assets/img/logout.png"></a><p>Logout</p></li>
+  </ul>
+</div>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
+</body>
+</html>

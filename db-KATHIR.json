@@ -1,0 +1,417 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullName": "Kathiravan A",
+      "email": "adminnnn@gmail.com",
+      "password": "12345678",
+      "mobileNo": 9789536330,
+      "department": "Testing",
+      "dob": "2002-05-05",
+      "add1": "wdrftghyujikol",
+      "add2": "qsdefrg",
+      "city": "Anuparpalayam",
+      "region": "tamil  nadu",
+      "postalcode": 641652,
+      "id": 2
+    },
+    {
+      "fullName": "Dinesh Kumar",
+      "email": "dinesh.aspire@gmail.com",
+      "password": "Dinesh@1",
+      "mobileNo": 9789536330,
+      "department": "Cloud",
+      "dob": "2001-01-20",
+      "gender": "Male",
+      "photo": "assets/img/Dinesh.jpg",
+      "add1": "Sri Shakthi College",
+      "add2": "Chinniyampalayam",
+      "city": "Coimbatore",
+      "region": "Tamilnadu",
+      "postalcode": 64897,
+      "id": 3
+    },
+    {
+      "fullName": "Karthik",
+      "email": "karthik@123",
+      "password": "",
+      "mobileNo": "7894561231",
+      "salary": 30000,
+      "department": "Production",
+      "gender": "Male",
+      "dob": "2023-04-08",
+      "id": 5
+    },
+    {
+      "fullName": "Pavithra",
+      "email": "pavi@gmail.com",
+      "password": "pavin@123",
+      "mobileNo": "4561237898",
+      "salary": 30000,
+      "department": "Production",
+      "gender": "Female",
+      "dob": "2023-04-04",
+      "id": 6
+    },
+    {
+      "fullName": "Madesh",
+      "email": "madesh123@gmail.com",
+      "password": "Mad@1",
+      "mobileNo": "789456123",
+      "salary": 52000,
+      "department": "Production",
+      "gender": "Male",
+      "dob": "2023-06-14",
+      "id": 11
+    },
+    {
+      "fullName": "Thilip Chandru",
+      "email": "thilipChandru@gmail.com",
+      "password": "Thilip@1",
+      "mobileNo": 1234567890,
+      "salary": 20000,
+      "department": "Cloud",
+      "gender": "Male",
+      "dob": "2001-01-01",
+      "id": 12
+    },
+    {
+      "fullName": "Kishore",
+      "email": "kishorevinith@srishakthi.ac.in",
+      "password": "kishore@1",
+      "mobileNo": "7904622543",
+      "department": "Testing",
+      "salary": "25000",
+      "gender": "male",
+      "dob": "2023-07-04",
+      "address": "Sap cinema Hall, \nTiruppur",
+      "aadharNumber": "123456789123",
+      "bankAccountNumber": "12345678235",
+      "sureName": "Vinith",
+      "id": 14
+    }
+  ],
+  "admin": [
+    {
+      "email": "admin@gmail.com",
+      "password": "12345678"
+    }
+  ],
+  "Timesheet": [
+    {
+      "name": "Madesh",
+      "email": "madesh123@gmail.com",
+      "date": "2023-06-27",
+      "startTime": "19:38",
+      "endTime": "19:41",
+      "workDone": "angular session",
+      "status": "Declined",
+      "id": 9
+    },
+    {
+      "name": "Thilip Chandru",
+      "email": "ThilipChandru@gmail.com",
+      "date": "2023-06-27",
+      "startTime": "20:29",
+      "endTime": "13:29",
+      "workDone": "self exploration on pipes",
+      "status": "Accepted",
+      "id": 10
+    },
+    {
+      "name": "Pavithra",
+      "email": "pavi@gmail.com",
+      "date": "2023-07-04",
+      "startTime": "13:10",
+      "endTime": "16:12",
+      "workDone": "standup call",
+      "status": "Pending",
+      "id": 11
+    },
+    {
+      "name": "Pavithra",
+      "email": "pavi@gmail.com",
+      "date": "2023-07-14",
+      "startTime": "10:00",
+      "endTime": "17:30",
+      "workDone": "Attended a stand-Up call and completed the pending task",
+      "status": "Pending",
+      "id": 12
+    },
+    {
+      "name": "Madesh",
+      "email": "madesh123@gmail.com",
+      "date": "2023-07-21",
+      "startTime": "17:33",
+      "endTime": "18:33",
+      "workDone": "Worked on the sql basics",
+      "status": "Pending",
+      "id": 13
+    },
+    {
+      "name": "Madesh",
+      "email": "madesh123@gmail.com",
+      "date": "2023-07-21",
+      "startTime": "17:35",
+      "endTime": "19:35",
+      "workDone": "attened a work shop",
+      "status": "Pending",
+      "id": 14
+    }
+  ],
+  "Notification": [
+    {
+      "Receiver": "Production",
+      "Subject": "Do the Work",
+      "Content": "hai team, lets finsih the task by today\n",
+      "id": 1
+    },
+    {
+      "Receiver": "",
+      "Subject": "",
+      "Content": "",
+      "id": 2
+    }
+  ],
+  "leaveForms": [
+    {
+      "name": "kathiravan",
+      "email": "kathiravan@gmail.com",
+      "fromDate": "2023-04-12",
+      "toDate": "2023-05-03",
+      "hours": 5,
+      "value": "Sick Leave",
+      "status": "Accepted",
+      "id": 2
+    },
+    {
+      "taskName": "BugFix ID-101",
+      "description": "In the ABC project, the alignment is missing",
+      "deadline": "2023-06-30T11:30",
+      "assignee": "Madesh",
+      "status": "Declined",
+      "id": 4
+    },
+    {
+      "name": "Dinesh Kumar",
+      "email": "dinesh.aspire@gmail.com",
+      "fromDate": "2023-06-07",
+      "toDate": "2023-06-21",
+      "hours": 3,
+      "value": "Vacation Leave",
+      "status": "Declined",
+      "id": 5
+    },
+    {
+      "name": "Pavithra",
+      "email": "pavi@gmail.com",
+      "fromDate": "2023-06-13",
+      "toDate": "2023-06-21",
+      "hours": 21,
+      "value": "Vacation Leave",
+      "status": "Declined",
+      "id": 6
+    },
+    {
+      "name": "Madesh",
+      "email": "madesh123@gmail.com",
+      "fromDate": "2023-06-13",
+      "toDate": "2023-06-14",
+      "hours": 12,
+      "value": "Personal Leave",
+      "status": "Accepted",
+      "id": 7
+    },
+    {
+      "name": "Thilip Chandru",
+      "email": "ThilipChandru@gmail.com",
+      "fromDate": "",
+      "toDate": "",
+      "hours": "",
+      "value": "",
+      "status": "Pending",
+      "id": 8
+    },
+    {
+      "name": "Pavithra",
+      "email": "pavi@gmail.com",
+      "fromDate": "2023-07-20",
+      "toDate": "2023-07-21",
+      "hours": 1,
+      "value": "Sick Leave",
+      "status": "Pending",
+      "id": 10
+    },
+    {
+      "name": "Pavithra",
+      "email": "pavi@gmail.com",
+      "fromDate": "2023-07-28",
+      "toDate": "2023-08-23",
+      "hours": 26,
+      "value": "Personal Leave",
+      "status": "Pending",
+      "id": 11
+    }
+  ],
+  "Active_Hours": [
+    {
+      "loginTime": "2023-07-14T04:06:02.499Z",
+      "logoutTime": "2023-07-14T04:06:40.924Z",
+      "duration": 0.010673611111111111,
+      "userName": "Dinesh Kumar",
+      "id": 1
+    },
+    {
+      "loginTime": "2023-07-14T04:13:40.834Z",
+      "logoutTime": "2023-07-14T04:14:23.860Z",
+      "duration": "0.011951666666666666",
+      "userName": "Madesh",
+      "id": 2
+    },
+    {
+      "loginTime": "2023-07-14T15:25:57.718Z",
+      "logoutTime": "2023-07-14T15:26:30.317Z",
+      "duration": 0.009055277777777778,
+      "userName": "undefined",
+      "id": 3
+    },
+    {
+      "loginTime": "2023-07-14T15:31:49.886Z",
+      "logoutTime": "2023-07-14T15:36:23.468Z",
+      "duration": 0.075995,
+      "userName": "Kishore",
+      "id": 4
+    },
+    {
+      "loginTime": "2023-07-14T15:43:03.175Z",
+      "logoutTime": "2023-07-16T14:05:30.632Z",
+      "duration": 46.37429361111111,
+      "userName": "Dinesh Kumar",
+      "id": 5
+    },
+    {
+      "loginTime": "2023-07-20T09:19:03.398Z",
+      "logoutTime": "2023-07-20T09:21:26.223Z",
+      "duration": 0.03967361111111111,
+      "userName": "Thilip Chandru",
+      "id": 6
+    },
+    {
+      "loginTime": "2023-07-20T12:22:55.642Z",
+      "logoutTime": "2023-07-20T12:23:02.878Z",
+      "duration": 0.00201,
+      "userName": "Dinesh Kumar",
+      "id": 7
+    },
+    {
+      "loginTime": "2023-07-20T12:25:14.814Z",
+      "logoutTime": "2023-07-20T12:29:32.485Z",
+      "duration": 0.07157527777777778,
+      "userName": "Kishore",
+      "id": 8
+    },
+    {
+      "loginTime": "2023-07-23T10:55:37.942Z",
+      "logoutTime": "2023-07-23T10:55:43.297Z",
+      "duration": 0.0014875,
+      "userName": "Dinesh Kumar",
+      "id": 9
+    },
+    {
+      "loginTime": "2023-08-09T15:14:17.346Z",
+      "logoutTime": "2023-08-09T15:14:24.906Z",
+      "duration": 0.0021,
+      "userName": "Dinesh Kumar",
+      "id": 10
+    },
+    {
+      "loginTime": "2023-08-12T11:51:22.923Z",
+      "logoutTime": "2023-08-12T11:51:35.817Z",
+      "duration": 0.0035816666666666666,
+      "userName": "Dinesh Kumar",
+      "id": 11
+    },
+    {
+      "loginTime": "2023-08-15T05:33:30.178Z",
+      "logoutTime": "2023-08-15T05:34:11.750Z",
+      "duration": 0.011547777777777778,
+      "userName": "Kishore",
+      "id": 12
+    },
+    {
+      "loginTime": "2023-09-07T16:15:27.195Z",
+      "logoutTime": "2023-09-07T16:15:49.651Z",
+      "duration": 0.006237777777777778,
+      "userName": "Dinesh Kumar",
+      "id": 13
+    },
+    {
+      "loginTime": "2023-09-15T14:05:05.336Z",
+      "logoutTime": "2023-09-15T14:05:57.084Z",
+      "duration": 0.014374444444444445,
+      "userName": "Pavithra",
+      "id": 14
+    },
+    {
+      "loginTime": "2023-12-15T07:05:08.171Z",
+      "logoutTime": "2023-12-15T07:05:12.254Z",
+      "duration": 0.0011341666666666666,
+      "userName": "Pavithra",
+      "id": 15
+    }
+  ],
+  "AssignedTask": [
+    {
+      "taskName": "hia",
+      "description": "a",
+      "deadline": "2023-06-14",
+      "assignee": "employee1",
+      "id": 1
+    },
+    {
+      "taskName": "debugging ",
+      "description": "debugging the prodution",
+      "deadline": "2023-06-21",
+      "assignee": "Madesh Production",
+      "id": 2
+    },
+    {
+      "taskName": "Client jhon ",
+      "description": "production crashed",
+      "deadline": "2023-06-20T10:50",
+      "assignee": "Dinesh Kumar",
+      "status": "Pending",
+      "id": 3
+    },
+    {
+      "taskName": "BugFix ID-101",
+      "description": "In the ABC project, the alignment is missing",
+      "deadline": "2023-06-30T11:30",
+      "assignee": "Madesh",
+      "status": "Pending",
+      "id": 4
+    },
+    {
+      "taskName": "Add Validation -Id 103",
+      "description": "In Project, NO 103 Add the login validation, and test manual and report the status on or before the deadline and also the check the validation before production",
+      "deadline": "2023-06-29T10:34",
+      "assignee": "Thilip Chandru",
+      "status": "completed",
+      "id": 5
+    },
+    {
+      "taskName": "Implementation ID No:22",
+      "description": "Add the custom validation in the XYZ Application And the password it should contain 8 characters",
+      "deadline": "2023-07-26T10:00",
+      "assignee": "Kishore",
+      "status": "Pending",
+      "id": 6
+    }
+  ]
+}

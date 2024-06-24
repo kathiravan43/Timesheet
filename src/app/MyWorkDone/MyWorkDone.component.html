@@ -1,0 +1,30 @@
+<h3>Work Done </h3>
+<table>
+  <thead>
+    <tr>
+      <th>Employee Name</th>
+      <th>Employee Email</th>
+      <th>Date</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Work Done</th>
+      <th>Status</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let request of myWorkDone">
+      <td>{{ request.name }}</td>
+      <td>{{ request.email }}</td>
+      <td>{{ request.date | date }}</td>
+      <td>{{ request.startTime | TimePipe}}</td>
+      <td>{{ request.endTime |TimePipe }}</td>
+      <td>{{ request.workDone }}</td>
+      <td>{{ request.status }}</td>
+
+    </tr>
+  </tbody>
+</table>
+<div>
+  <app-usersidenavbar></app-usersidenavbar>
+</div>

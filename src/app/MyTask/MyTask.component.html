@@ -1,0 +1,32 @@
+
+
+    <table>
+      <thead>
+        <tr>
+          <th>Employee Name</th>
+          <th>Task Name</th>
+          <th>Description</th>
+          <th>DeadLine</th>
+          <th>Status</th>
+          <th>Action</th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let request of tasks">
+          <td>{{ request.assignee }}</td>
+          <td>{{ request.taskName }}</td>
+          <td class="word-wrap-container">{{ request.description |WordWarp  }}</td>
+          <td>{{ request.deadline | date }}</td>
+          <td>{{ request.status }}</td>
+          <td>
+            <button *ngIf="request.status === 'Pending'" (click)="updateLeaveRequest (request, 'completed')">Completed</button>
+            <button *ngIf="request.status === 'Pending'" (click)="updateLeaveRequest(request, 'In-Progress')">In-Progress</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+<div>
+  <app-usersidenavbar></app-usersidenavbar>
+</div>

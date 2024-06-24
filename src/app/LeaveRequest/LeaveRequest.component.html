@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leave Request Form</title>
+  <script>
+    var inputElement = document.getElementById('name');
+    var inputElement = document.getElementById('email');
+    inputElement.disabled = true; // Disables the input field
+    // inputElement.disabled = false; // Enables the input field
+    window.onload = function() {
+         var today = new Date().toISOString().split('T')[0];
+         var maxDate = new Date();
+         maxDate.setDate(maxDate.getDate() + 10);
+         var maxDateStr = maxDate.toISOString().split('T')[0];
+         document.getElementById('from_date').setAttribute('min', today);
+         document.getElementById('from_date').setAttribute('max', maxDateStr);
+       };
+       function calculateDays() {
+    var fromDate = new Date(document.getElementById("from_date").value);
+    var toDate = new Date(document.getElementById("to_Date").value);
+
+    if (from_Date && to_Date) {
+      var timeDiff = toDate.getTime() - fromDate.getTime();
+      var daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+      document.getElementById("result").innerText = "Number of days: " + daysDiff;
+    }
+  }
+  </script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+	<div class="container">
+		<h2>Leave Request Form</h2>
+		<form action="#" method="post" [formGroup]="leaveForm" (ngSubmit)="applyLeave()">
+
+			<!-- Name Field -->
+			<div class="form-group">
+				<label for="name">Name:</label>
+				<input type="text" formControlName="name" class="form-control" id="name" [(ngModel)]="employeeName"    name="name" >
+			</div>
+
+			<!-- Email Field -->
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" formControlName="email" for class="form-control" id="email" [(ngModel)]="employeeEmail" name="email" >
+			</div>
+
+			<!-- From Date Field -->
+			<div class="form-group">
+				<label for="from_date">From Date:</label>
+				<input type="date" formControlName="fromDate" class="form-control" id="from_date" name="from_date" [min]="minDate" (ngModelChange)="calculateDays()">
+			</div>
+
+			<!-- To Date Field -->
+			<div class="form-group">
+				<label for="to_date">To Date:</label>
+				<input type="date" formControlName="toDate" class="form-control" id="to_date" name="to_date" [min]="minDate" (ngModelChange)="calculateDays()">
+			</div>
+
+            <div class="form-group">
+				<label for="email">Total No Days:</label>
+
+				<input type="number" formControlName="hours" class="form-control" id="time" name="time" [(ngModel)]="daysDiff">
+			</div>
+
+			<!-- Type of Leave Field -->
+			<div class="form-group">
+				<label for="leave_type">Type of Leave:</label>
+				<select class="form-control" formControlName="value" id="leave_type" name="leave_type" >
+					<option value="">Select Type of Leave</option>
+					<option value="Sick Leave">Sick Leave</option>
+					<option value="Vacation Leave">Vacation Leave</option>
+					<option value="Personal Leave">Personal Leave</option>
+				</select>
+			</div>
+
+
+			<!-- Submit Button -->
+			<button type="submit" class="btn btn-primary">Submit</button>
+
+		</form>
+	</div>
+
+	<!-- Bootstrap JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+<div>
+  <app-usersidenavbar></app-usersidenavbar>
+</div>
+

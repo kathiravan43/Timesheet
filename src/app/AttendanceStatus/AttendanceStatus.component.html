@@ -1,0 +1,28 @@
+<h3>Leave Requests</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Employee Name</th>
+      <th>Employee Email</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Reason</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let request of listofLeaves">
+      <td>{{ request.name }}</td>
+      <td>{{ request.email }}</td>
+      <td>{{ request.fromDate | date }}</td>
+      <td>{{ request.toDate | date }}</td>
+      <td>{{ request.value }}</td>
+      <td>{{ request.status }}</td>
+      <td>
+        <button *ngIf="request.status === 'Pending'" (click)="updateLeaveRequest (request, 'Accepted')">Accept</button>
+        <button *ngIf="request.status === 'Pending'" (click)="updateLeaveRequest(request, 'Declined')">Decline</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

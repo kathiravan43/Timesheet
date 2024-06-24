@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function validateLoginForm(event) {
+  event.preventDefault();
+
+  // Get form inputs
+  var emailInput = document.getElementById('exampleInputEmail1');
+  var passwordInput = document.getElementById('exampleInputPassword1');
+
+  // Get the values
+  var email = emailInput.value;
+  var password = passwordInput.value;
+
+  // Perform email validation
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    emailInput.classList.remove('valid-input');
+    emailInput.classList.add('invalid-input');
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+
+  emailInput.classList.remove('invalid-input');
+  emailInput.classList.add('valid-input');
+
+
+}
+
+  </script>
+
+  <title>Document</title>
+</head>
+<body>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1> Login</h1>
+
+        </div>
+        <form>
+          <form [formGroup]="loginForm" (ngSubmit)="login()" onsubmit="validateLoginForm(event)">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input  formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [ngClass]="{ 'valid-input': isFieldValid('email'), 'invalid-input': isFieldInvalid('email') }">
+              <div id="emailHelp" class="form-text"></div>
+              <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')" >*Email Id is required</span>
+
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+              <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*password is required</span>
+
+            </div>
+
+            <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Login</button>
+          </form>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+
+<h3>Message</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Receiver</th>
+      <th>Subject</th>
+      <th>Content</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let request of messageFromAdmin">
+      <td>{{ request.Receiver }}</td>
+      <td>{{ request.Subject }}</td>
+      <td>{{ request.Content  }}</td>
+
+
+    </tr>
+  </tbody>
+</table>

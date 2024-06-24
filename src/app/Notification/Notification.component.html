@@ -1,0 +1,23 @@
+
+<div >
+  <h3>Send Message</h3>
+  <form [formGroup]="notification"  (ngSubmit)="sendMessage()">
+    <div>
+      <label>Receiver:</label>
+      <select formControlName="Receiver">
+        <option value="IT">IT</option>
+        <option value="Cloud">Cloud</option>
+        <option value="Production">Production</option>
+      </select>
+    </div>
+    <div>
+      <label>Subject:</label>
+      <input type="text"  formControlName="Subject" required>
+    </div>
+    <div>
+      <label>Content:</label>
+      <textarea  required formControlName="Content"></textarea>
+    </div>
+    <button type="submit">Send</button>
+  </form>
+</div>

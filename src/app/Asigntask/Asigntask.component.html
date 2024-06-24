@@ -1,0 +1,27 @@
+
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+  <label>
+    Task Name:
+    <input type="text" formControlName="taskName">
+  </label>
+
+  <label>
+    Description:
+    <textarea formControlName="description"></textarea>
+  </label>
+
+  <label>
+    Deadline:
+    <input type="datetime-local" formControlName="deadline"  id="deadline-input" required >
+  </label>
+
+  <label class="form-label">
+    Assignee:
+    <select formControlName="assignee">
+      <option *ngFor="let employee of listOfEmployees" >{{ employee.fullName }}</option>
+    </select>
+  </label>
+
+  <button type="submit" [disabled]="taskForm.invalid">Assign Task</button>
+</form>
+

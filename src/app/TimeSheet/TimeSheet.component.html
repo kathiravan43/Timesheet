@@ -1,0 +1,31 @@
+<form class="time-sheet-form"  [formGroup]="formValue"  (ngSubmit)="postworkDetails()" >
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" formControlName="name" [(ngModel)]="employeeName" required >
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"  formControlName="email" [(ngModel)]="employeeEmail" required  >
+  </div>
+  <div class="form-group">
+    <label for="start-time">Date:</label>
+    <input type="date" formControlName="date" id="date" name="start-time" [(ngModel)]="currentDate" max="{{ currentDate }}" required>
+  </div>
+  <div class="form-group">
+    <label for="start-time">Starting Time:</label>
+    <input type="time" formControlName="startTime" id="start-time" name="start-time">
+
+  </div>
+  <div class="form-group">
+    <label for="end-time">Ending Time:</label>
+    <input type="time" id="end-time" formControlName="endTime" name="end-time" required>
+  </div>
+  <div class="form-group">
+    <label for="work-done">Work Done:</label>
+    <textarea id="work-done" formControlName="workDone" name="work-done" rows="4" required></textarea>
+  </div>
+  <button type="submit">Submit</button>
+</form>
+<div>
+  <app-usersidenavbar></app-usersidenavbar>
+</div>

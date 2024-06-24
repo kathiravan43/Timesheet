@@ -1,0 +1,38 @@
+
+
+
+<h3>WorkDone BY Employee</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Employee Name</th>
+      <th>Employee Email</th>
+      <th>Date</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>workDone</th>
+      <th>Status</th>
+      <th>Action</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let request of timesheet">
+      <td>{{ request.name }}</td>
+      <td>{{ request.email }}</td>
+      <td>{{ request.date| date }}</td>
+      <td>{{ request.startTime|TimePipe}}</td>
+      <td>{{ request.endTime |TimePipe}}</td>
+      <td>{{ request.workDone }}</td>
+      <td>{{ request.status }}</td>
+      <td>
+        <button *ngIf="request.status === 'Pending'" (click)="updateLeaveRequest (request, 'Accepted')">Accept</button>
+        <button *ngIf="request.status === 'Pending'" (click)="updateLeaveRequest(request, 'Declined')">Decline</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+

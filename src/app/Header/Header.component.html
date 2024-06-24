@@ -1,0 +1,18 @@
+<!-- <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: aquamarine; text-align: justify;">Employee Attendance Management</h3>
+ --><nav class="navigation-bar">
+  <span>
+     <img class="logo" src="assets/img/aspire logo.png"/>
+
+     <a   *ngIf="authService.isLoggedIn()" routerLink="login"> Login  </a>
+     <a   *ngIf="!authService.isLoggedIn()" routerLink="/logout"> Logout  </a>
+     <a  routerLink="login"> Contact us  </a>
+     <a   style="text-decoration: none" routerLink="adminlogin"> Aboutus  </a>
+     <a routerLink="home"> <span> Home </span> </a>
+     <p>{{name}}</p><span>  </span>
+
+
+
+    </span>
+  </nav>
+  <router-outlet></router-outlet>
+

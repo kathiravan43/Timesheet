@@ -1,0 +1,41 @@
+<div class="search">
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    placeholder="Search by Employee Name"
+    class="search-input"
+    (input)="filterData()"
+  />
+</div>
+
+
+<table class="timesheet-table colorful-table">
+  <thead>
+    <tr>
+      <th>Employee Name</th>
+      <th>Login Date</th>
+      <th>Login Time</th>
+      <th>Logout Date</th>
+      <th>Logout Time</th>
+      <th>Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of filteredData" (click)="showEmployeeDetails(data)">
+      <td>{{data.userName}}</td>
+      <td>{{ formatDate(data.loginTime) }}</td>
+
+      <td>{{data.loginTime| date: 'hh:mm a' }}</td>
+      <td>{{ formatDate(data.logoutTime) }}</td>
+      <td>{{ data.logoutTime| date: 'hh:mm a'}}</td>
+      <td> <span class="duration"> {{ formatDuration(data.duration) }}</span></td>
+    </tr>
+  </tbody>
+</table>
+<div *ngIf="selectedEmployee" class="employee-details">
+  <h2>Employee Details</h2>
+  <p><strong>Name:</strong> {{ selectedEmployee.userName }}</p>
+  <p><strong>Login Time:</strong> {{ formatDate(selectedEmployee.loginTime) }}</p>
+  <p><strong>Logout Time:</strong> {{ formatDate(selectedEmployee.logoutTime) }}</p>
+  <p><strong>Duration:</strong> {{ formatDuration(selectedEmployee.duration) }}</p>
+</div>
